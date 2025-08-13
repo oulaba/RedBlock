@@ -48,17 +48,17 @@ Python **3.8+** is recommended. Required dependencies include:
 ```text
 numpy==1.x.x
 torch==2.x.x
-[Other dependencies, e.g., transformers==4.x.x]```
+[Other dependencies, e.g., transformers==4.x.x]
 
 Install depandencies using"
 
 ```python
-pip install -r requirements.txt```
+pip install -r requirements.txt
 
 ### Run the main program:
 
 ```text
-bash sample-entrypoint.sh```
+bash sample-entrypoint.sh
 
 ## Acknowledgments
 We thank the authors of the following papers for providing their open-source code and inspiration:
