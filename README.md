@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## Demo
 
-This section introduces an example usage of our watermark scheme. If using 4 colorlist:
+This section introduces an example usage of our watermark scheme. To run on `llama-2-7b`, please login with you hugggingface token that has been granted access. If using 4 colorlist:
 - For RedBlock-rh:
   ```
   bash sample-entrypoint.sh
