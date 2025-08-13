@@ -11,22 +11,26 @@ This repository provides the official implementation of our paper *"RedBlock: Ro
 Python **3.9+** is recommended. 
 Install depandencies using
 
-`python
-pip install -r requirements.txt`
+```python
+pip install -r requirements.txt
+```
 
 ## Demo
 
 This section introduces an example usage of our watermark scheme. If using 4 colorlist:
 - For RedBlock-rh:
-  `text
-  bash sample-entrypoint.sh`
+  ```
+  bash sample-entrypoint.sh
+  ```
 - For RedBlock-bh, first we need to generate frequency mapping:
-  `text
+  ```
   cd balance_hash
-  python3 helper.py -p 4 --path ../token_freq_llama.pkl --save './map_freq_8b.pkl'`
+  python3 helper.py -p 4 --path ../token_freq_llama.pkl --save './map_freq_8b.pkl'
+  ```
 then for quick run,try running
-  `text
-  bash sample-entrypoint.sh`
+  ```
+  bash sample-entrypoint.sh
+  ```
 
 
 
