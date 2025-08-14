@@ -1,5 +1,3 @@
-# Misc for hypothesis testing code used in notebooks and evaluation
-
 import numpy as np
 import numpy.ma as ma
 from scipy.stats import geom, chisquare

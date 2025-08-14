@@ -7,40 +7,32 @@ export HF_ACCESS_TOKEN=""
 huggingface-cli login --token $HF_ACCESS_TOKEN
 export WANDB=T
 
-
 ### Experiment type ###
 export RUN_GEN=T; export RUN_ATT=F; export RUN_EVAL=T; export DEBUG=F;
 export LIMIT_ROWS=10000
 #export METHOD="Redblock-rh"
 export METHOD="Redblock-bh"
-export BP_MAP="../balance_hash/map_freq_32.pkl"
+export BP_MAP="../balance_hash/map_freq.pkl"
 ### Generation ###
 export MODEL_PATH="meta-llama/Llama-2-7b-hf";
 #export MODEL_PATH="facebook/opt-1.3b"
-#export MODEL_PATH="tiiuae/falcon-7b-instruct"
 #export MODEL_PATH="mistralai/Mistral-7B-v0.1"
 #export MODEL_PATH="google/gemma-7b"
 export BS=1; export TOKEN_LEN=200;
 export D_NAME="allenai/c4"; export D_CONFIG="realnewslike";
-#export D_NAME="wikitext"; export D_CONFIG="wikitext-103-v1";
 export INPUT_FILTER="prompt_and_completion_length"
 if [ $D_NAME == "lfqa" ]
 then
   export INPUT_FILTER="completion_length"
 fi
 export NUM_BEAMS=1; export SAMPLING=T
-export FP16=T; export MIN_GEN=100
+export FP16=T; export MIN_GEN=10
 ## multi-bit
-export MSG_LEN=32; export RADIX=4; export ZERO_BIT=F; export CODE_LEN=8;
-export SEED_SCH="selfhash"; export GAMMA=0.25; export DELTA=1.175;
+export MSG_LEN=8; export RADIX=4; export ZERO_BIT=F; export CODE_LEN=8;
+export SEED_SCH="lefthash"; export GAMMA=0.25; export DELTA=1.175;
 ## logging
-#export RUN_NAME="llama13-c4-${MSG_LEN}b-${TOKEN_LEN}T-${RADIX}R-${SEED_SCH}"
 export RUN_NAME="${MSG_LEN}b-${TOKEN_LEN}T-${RADIX}R-${SEED_SCH}"
-#export RUN_NAME="${MSG_LEN}b-${TOKEN_LEN}T-${RADIX}R-${SEED_SCH}-${DELTA}"
-#export OUTPUT_DIR="./experiments/block-rh-mul-run20"
-export OUTPUT_DIR="./experiments/block-bh-mul-run"
-#export OUTPUT_DIR="./experiments/block-rh-mul-delta-run/"
-
+export OUTPUT_DIR="./experiments/bh-run"
 
 ### Attack ###
 #export ATTACK_M="dipper";

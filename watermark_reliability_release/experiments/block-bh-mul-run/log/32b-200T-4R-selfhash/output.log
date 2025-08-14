@@ -1,3 +1,0 @@
-Running pipeline with output dir: ./experiments/block-bh-mul-run/32b-200T-4R-selfhash
-./run_pipeline.sh: line 57: python: command not found
-./run_pipeline.sh: line 112: python: command not found
